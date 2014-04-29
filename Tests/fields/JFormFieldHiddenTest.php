@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_Hidden;
+use Joomla\Form\Field\Field_Hidden;
 
 /**
  * Test class for JForm.

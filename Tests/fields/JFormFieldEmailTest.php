@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_Email;
+use Joomla\Form\Field\Field_Email;
 
 /**
  * Test class for JFormFieldEMail.

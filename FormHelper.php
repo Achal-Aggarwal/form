@@ -176,15 +176,15 @@ class FormHelper
 			$prefix = 'Joomla';
 		}
 
-		$class = ucfirst($prefix) . '\\Form\\' . ucfirst($entity);
+		$class = ucfirst($prefix) . '\\Form\\' . ucfirst($entity) . '\\';
 
 		if ($entity === 'field')
 		{
-			$class .= '_' . ucfirst($type);
+			$class .= ucfirst($entity) . '_' . ucfirst($type);
 		}
 		else
 		{
-			$class .= '\\' . ucfirst($type);
+			$class .= ucfirst($type);
 		}
 
 		if (class_exists($class))

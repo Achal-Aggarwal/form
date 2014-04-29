@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_Radio;
+use Joomla\Form\Field\Field_Radio;
 
 /**
  * Test class for JForm.

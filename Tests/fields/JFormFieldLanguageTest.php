@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestDatabase;
-use Joomla\Form\Field_Language;
+use Joomla\Form\Field\Field_Language;
 
 /**
  * Test class for JFormFieldLanguage.

@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_Checkbox;
+use Joomla\Form\Field\Field_Checkbox;
 
 /**
  * Test class for JFormFieldCheckbox.

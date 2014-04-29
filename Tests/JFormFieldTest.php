@@ -73,7 +73,7 @@ class JFormFieldTest extends \PHPUnit_Framework_TestCase
 		FormHelper::addFieldPath(__DIR__ . '/_testfields');
 
 		FormHelper::loadFieldType('foo.bar');
-		$field = new \Foo\Form\Field_Bar($form);
+		$field = new \Foo\Form\Field\Field_Bar($form);
 		$this->assertEquals(
 			$field->type,
 			'Foo\Field_Bar',
@@ -81,7 +81,7 @@ class JFormFieldTest extends \PHPUnit_Framework_TestCase
 		);
 
 		FormHelper::loadFieldType('foo');
-		$field = new \Joomla\Form\Field_Foo($form);
+		$field = new \Joomla\Form\Field\Field_Foo($form);
 		$this->assertEquals(
 			$field->type,
 			'Joomla\Field_Foo',
@@ -89,7 +89,7 @@ class JFormFieldTest extends \PHPUnit_Framework_TestCase
 		);
 
 		FormHelper::loadFieldType('modal_foo');
-		$field = new \Joomla\Form\Field_Modal_Foo($form);
+		$field = new \Joomla\Form\Field\Field_Modal_Foo($form);
 		$this->assertEquals(
 			$field->type,
 			'Joomla\Field_Modal_Foo',

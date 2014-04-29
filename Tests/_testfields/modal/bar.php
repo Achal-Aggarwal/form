@@ -4,7 +4,7 @@
  * @license    GNU General Public License version 2 or later; see LICENSE
  */
 
-namespace Foo\Form;
+namespace Foo\Form\Field;
 
 /**
  * Form Field class for the Joomla Framework.

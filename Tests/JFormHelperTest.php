@@ -129,7 +129,7 @@ class JFormHelperTest extends \PHPUnit_Framework_TestCase
 		);
 
 		$this->assertThat(
-			(FormHelper::loadFieldType('list') instanceof \Joomla\Form\Field_List),
+			(FormHelper::loadFieldType('list') instanceof \Joomla\Form\Field\Field_List),
 			$this->isTrue(),
 			'Line:' . __LINE__ . ' loadFieldType should return the correct class.'
 		);
@@ -139,28 +139,28 @@ class JFormHelperTest extends \PHPUnit_Framework_TestCase
 
 		include_once '_testfields/test.php';
 		$this->assertThat(
-			(FormHelper::loadFieldType('test') instanceof \Joomla\Form\Field_Test),
+			(FormHelper::loadFieldType('test') instanceof \Joomla\Form\Field\Field_Test),
 			$this->isTrue(),
 			'Line:' . __LINE__ . ' loadFieldType should return the correct custom class.'
 		);
 
 		include_once '_testfields/bar.php';
 		$this->assertThat(
-			(FormHelper::loadFieldType('foo.bar') instanceof \Foo\Form\Field_Bar),
+			(FormHelper::loadFieldType('foo.bar') instanceof \Foo\Form\Field\Field_Bar),
 			$this->isTrue(),
 			'Line:' . __LINE__ . ' loadFieldType should return the correct custom class.'
 		);
 
 		include_once '_testfields/modal/foo.php';
 		$this->assertThat(
-			(FormHelper::loadFieldType('modal_foo') instanceof \Joomla\Form\Field_Modal_Foo),
+			(FormHelper::loadFieldType('modal_foo') instanceof \Joomla\Form\Field\Field_Modal_Foo),
 			$this->isTrue(),
 			'Line:' . __LINE__ . ' loadFieldType should return the correct custom class.'
 		);
 
 		include_once '_testfields/modal/bar.php';
 		$this->assertThat(
-			(FormHelper::loadFieldType('foo.modal_bar') instanceof \Foo\Form\Field_Modal_Bar),
+			(FormHelper::loadFieldType('foo.modal_bar') instanceof \Foo\Form\Field\Field_Modal_Bar),
 			$this->isTrue(),
 			'Line:' . __LINE__ . ' loadFieldType should return the correct custom class.'
 		);

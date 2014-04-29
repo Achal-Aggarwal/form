@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_DatabaseConnection;
+use Joomla\Form\Field\Field_DatabaseConnection;
 
 /**
  * Test class for JFormFieldDatabaseConnection.

@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_FolderList;
+use Joomla\Form\Field\Field_FolderList;
 
 /**
  * Test class for JFormFieldFolderList.

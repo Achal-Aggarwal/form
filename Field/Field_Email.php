@@ -6,16 +6,17 @@
  * @license    GNU General Public License version 2 or later; see LICENSE
  */
 
-namespace Joomla\Form;
+namespace Joomla\Form\Field;
 
 /**
  * Form Field class for the Joomla Framework.
- * Provides an input field for files
+ * Provides and input field for e-mail addresses
  *
- * @link   http://www.w3.org/TR/html-markup/input.file.html#input.file
+ * @link   http://www.w3.org/TR/html-markup/input.email.html#input.email
+ * @see    JFormRuleEmail
  * @since  1.0
  */
-class Field_File extends Field
+class Field_Email extends \Joomla\Form\Field
 {
 	/**
 	 * The form field type.
@@ -23,32 +24,28 @@ class Field_File extends Field
 	 * @var    string
 	 * @since  1.0
 	 */
-	public $type = 'File';
+	protected $type = 'Email';
 
 	/**
-	 * Method to get the field input markup for the file field.
-	 * Field attributes allow specification of a maximum file size and a string
-	 * of accepted file extensions.
+	 * Method to get the field input markup for e-mail addresses.
 	 *
 	 * @return  string  The field input markup.
 	 *
 	 * @since   1.0
-	 *
-	 * @note    The field does not include an upload mechanism.
-	 * @see     JFormFieldMedia
 	 */
 	protected function getInput()
 	{
 		// Initialize some field attributes.
-		$accept = $this->element['accept'] ? ' accept="' . (string) $this->element['accept'] . '"' : '';
 		$size = $this->element['size'] ? ' size="' . (int) $this->element['size'] . '"' : '';
-		$class = $this->element['class'] ? ' class="' . (string) $this->element['class'] . '"' : '';
+		$maxLength = $this->element['maxlength'] ? ' maxlength="' . (int) $this->element['maxlength'] . '"' : '';
+		$class = $this->element['class'] ? ' ' . (string) $this->element['class'] : '';
+		$readonly = ((string) $this->element['readonly'] == 'true') ? ' readonly="readonly"' : '';
 		$disabled = ((string) $this->element['disabled'] == 'true') ? ' disabled="disabled"' : '';
 
 		// Initialize JavaScript field attributes.
 		$onchange = $this->element['onchange'] ? ' onchange="' . (string) $this->element['onchange'] . '"' : '';
 
-		return '<input type="file" name="' . $this->name . '" id="' . $this->id . '"' . ' value=""' . $accept . $disabled . $class . $size
-			. $onchange . ' />';
+		return '<input type="text" name="' . $this->name . '" class="validate-email' . $class . '" id="' . $this->id . '"' . ' value="'
+			. htmlspecialchars($this->value, ENT_COMPAT, 'UTF-8') . '"' . $size . $disabled . $readonly . $onchange . $maxLength . '/>';
 	}
 }

@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_Timezone;
+use Joomla\Form\Field\Field_Timezone;
 
 /**
  * Test class for JForm.

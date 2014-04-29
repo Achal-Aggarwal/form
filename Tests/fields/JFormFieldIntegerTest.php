@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_Integer;
+use Joomla\Form\Field\Field_Integer;
 
 /**
  * Test class for JForm.

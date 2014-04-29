@@ -6,24 +6,25 @@
  * @license    GNU General Public License version 2 or later; see LICENSE
  */
 
-namespace Joomla\Form;
+namespace Joomla\Form\Field;
 
 /**
  * Form Field class for the Joomla Framework.
- * Provides a hidden field
+ * Supports a one line text field.
  *
- * @link   http://www.w3.org/TR/html-markup/input.hidden.html#input.hidden
+ * @link   http://www.w3.org/TR/html-markup/input.text.html#input.text
  * @since  1.0
  */
-class Field_Hidden extends Field
+class Field_Text extends \Joomla\Form\Field
 {
 	/**
 	 * The form field type.
 	 *
 	 * @var    string
+	 *
 	 * @since  1.0
 	 */
-	protected $type = 'Hidden';
+	protected $type = 'Text';
 
 	/**
 	 * Method to get the field input markup.
@@ -35,13 +36,16 @@ class Field_Hidden extends Field
 	protected function getInput()
 	{
 		// Initialize some field attributes.
+		$size = $this->element['size'] ? ' size="' . (int) $this->element['size'] . '"' : '';
+		$maxLength = $this->element['maxlength'] ? ' maxlength="' . (int) $this->element['maxlength'] . '"' : '';
 		$class = $this->element['class'] ? ' class="' . (string) $this->element['class'] . '"' : '';
+		$readonly = ((string) $this->element['readonly'] == 'true') ? ' readonly="readonly"' : '';
 		$disabled = ((string) $this->element['disabled'] == 'true') ? ' disabled="disabled"' : '';
 
 		// Initialize JavaScript field attributes.
 		$onchange = $this->element['onchange'] ? ' onchange="' . (string) $this->element['onchange'] . '"' : '';
 
-		return '<input type="hidden" name="' . $this->name . '" id="' . $this->id . '"' . ' value="'
-			. htmlspecialchars($this->value, ENT_COMPAT, 'UTF-8') . '"' . $class . $disabled . $onchange . ' />';
+		return '<input type="text" name="' . $this->name . '" id="' . $this->id . '"' . ' value="'
+			. htmlspecialchars($this->value, ENT_COMPAT, 'UTF-8') . '"' . $class . $size . $disabled . $readonly . $onchange . $maxLength . '/>';
 	}
 }
