@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_Password;
+use Joomla\Form\Field\PasswordField as Field_Password;
 
 /**
  * Test class for JForm.

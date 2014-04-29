@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_Spacer;
+use Joomla\Form\Field\SpacerField as Field_Spacer;
 
 /**
  * Test class for JForm.

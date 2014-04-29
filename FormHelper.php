@@ -176,21 +176,19 @@ class FormHelper
 			$prefix = 'Joomla';
 		}
 
-		$class = ucfirst($prefix) . '\\Form\\' . ucfirst($entity);
+		$class = ucfirst($prefix) . '\\Form\\' . ucfirst($entity)
+			. '\\' . ucfirst($type);
 
 		if ($entity === 'field')
 		{
-			$class .= '_' . ucfirst($type);
-		}
-		else
-		{
-			$class .= '\\' . ucfirst($type);
+			$class  .= ucfirst($entity);
 		}
 
 		if (class_exists($class))
 		{
 			return $class;
 		}
+
 
 		// Get the field search path array.
 		$paths = self::addPath($entity);

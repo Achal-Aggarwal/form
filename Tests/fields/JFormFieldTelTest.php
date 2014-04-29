@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_Tel;
+use Joomla\Form\Field\TelField as Field_Tel;
 
 /**
  * Test class for JFormFieldTel.

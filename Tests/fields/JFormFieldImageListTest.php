@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_ImageList;
+use Joomla\Form\Field\ImageListField as Field_ImageList;
 
 /**
  * Test class for JFormFieldImageList.

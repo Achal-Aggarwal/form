@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_List;
+use Joomla\Form\Field\ListField as Field_List;
 
 /**
  * Test class for JForm.

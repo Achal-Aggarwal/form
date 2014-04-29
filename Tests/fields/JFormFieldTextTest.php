@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_Text;
+use Joomla\Form\Field\TextField as Field_Text;
 
 /**
  * Test class for JForm.

@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_GroupedList;
+use Joomla\Form\Field\GroupedListField as Field_GroupedList;
 
 /**
  * Test class for JFormFieldGroupedList.

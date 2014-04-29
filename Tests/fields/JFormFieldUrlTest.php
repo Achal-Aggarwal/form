@@ -7,7 +7,7 @@
 namespace Joomla\Form\Tests;
 
 use Joomla\Test\TestHelper;
-use Joomla\Form\Field_Url;
+use Joomla\Form\Field\UrlField as Field_Url;
 
 /**
  * Test class for JFormFieldUrl.

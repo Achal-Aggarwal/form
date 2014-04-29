@@ -231,14 +231,12 @@ abstract class Field
 		{
 			$parts = Normalise::fromCamelCase(get_called_class(), true);
 
-			if ($parts[0] == 'J')
+			if ($parts[0] != 'J')
 			{
-				$this->type = String::ucfirst($parts[count($parts) - 1], '_');
+                $this->type = String::ucfirst($parts[0], '_');
 			}
-			else
-			{
-				$this->type = String::ucfirst($parts[0], '_') . String::ucfirst($parts[count($parts) - 1], '_');
-			}
+
+            $this->type .= String::ucfirst($parts[count($parts) - 2], '_');
 		}
 	}
 
